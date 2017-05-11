@@ -1,0 +1,13 @@
+#!/usr/bin/env python 
+# -*- coding: utf-8 -*-"
+"""
+Collatz - 2017 - by psy (epsylon@riseup.net)
+
+You should have received a copy of the GNU General Public License along
+with Collatz; if not, write to the Free Software Foundation, Inc., 51
+Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+"""
+from main import Collatz
+if __name__ == "__main__":
+    app = Collatz()
+    app.run()
