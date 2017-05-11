@@ -1,12 +1,9 @@
-=================================================================== 
 
 ![c](https://03c8.net/images/collatz_banner.png)
 
 ----------
 
 Collatz: "An unsolved problem in mathematics" - by psy 
-
-========================
 
 #### Info:
 
@@ -25,6 +22,7 @@ Collatz: "An unsolved problem in mathematics" - by psy
        sudo apt-get install python-matplotlib
 
  Or:
+       
        pip install matplotlib
 
 ####  Source libs:
@@ -36,17 +34,23 @@ Collatz: "An unsolved problem in mathematics" - by psy
  Collatz is released under the GPLv3. You can find the full license text 
  in the [LICENSE](./LICENSE) file.
 
-### Contact
+#### Contact
 
  Please report any problems you encounter to:
 
       - psy (epsylon@riseup.net)
 
-### Contribute: 
+#### Contribute: 
 
  To make donations use the following hash:
   
      - Bitcoin: 1Q63KtiLGzXiYA8XkWFPnWo7nKPWFr3nrc
 
-=================================================================== 
+----------
+
+####  Screenshots:
+
+  ![c](https://03c8.net/images/collatz_tree.png "Collatz Tree")
+
+  ![c](https://03c8.net/images/collatz_graph.png "Collatz Graph")
 
