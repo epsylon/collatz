@@ -28,8 +28,7 @@
 
 #### License:
 
- Collatz is released under the GPLv3. You can find the full license text 
- in the [LICENSE](./LICENSE) file.
+ Collatz is released under the GPLv3.
 
 #### Contact:
 
