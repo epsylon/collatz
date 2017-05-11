@@ -3,17 +3,14 @@
 
 ----------
 
-Collatz: "An unsolved problem in mathematics" - by psy 
-
 #### Info:
 
  https://en.wikipedia.org/wiki/Collatz_conjecture
 
 #### Installing:
 
- The tool runs on many platforms and it requires Python (2.x.y).
-
- To generate graphs, you need to install the following library:
+ This tool runs on many platforms and it requires Python (2.x.y). To generate graphs, you need 
+ to install the following library:
 
        python-matplotlib - Python based plotting system in a style similar to Matlab
 
@@ -34,9 +31,7 @@ Collatz: "An unsolved problem in mathematics" - by psy
  Collatz is released under the GPLv3. You can find the full license text 
  in the [LICENSE](./LICENSE) file.
 
-#### Contact
-
- Please report any problems you encounter to:
+#### Contact:
 
       - psy (epsylon@riseup.net)
 
@@ -44,7 +39,7 @@ Collatz: "An unsolved problem in mathematics" - by psy
 
  To make donations use the following hash:
   
-     - Bitcoin: 1Q63KtiLGzXiYA8XkWFPnWo7nKPWFr3nrc
+     - Bitcoin: 19aXfJtoYJUoXEZtjNwsah2JKN9CK5Pcjw
 
 ----------
 
