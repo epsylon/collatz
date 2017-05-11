@@ -53,6 +53,7 @@ class Collatz(object):
             print "\n [Info] Generated 'tree' secuence at folder: "+g+"/\n"
         else:
             print "\n [Info] You have this 'tree' secuence previously saved. Exiting...\n"
+        ax.clear()
         print 75*"=", "\n"
 
     def generate_forest(self, rng):
