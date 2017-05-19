@@ -5,7 +5,22 @@
 
 #### Info:
 
- https://en.wikipedia.org/wiki/Collatz_conjecture
+ Problem: https://en.wikipedia.org/wiki/Collatz_conjecture
+
+ Collatz is a researching tool that simulates 'Collatz's conjecture' math problem on a computacional level.
+
+ It will provide you all maths requirements to see results of desided combinations, applying automatically conjeture rules. 
+
+ This is very useful to simplify human abstraction level.
+
+ There are 3 posible modes for interaction: single random, manual and learning.
+
+    - single random (default): Just a simple random test that will allow you to understand how it works.
+    - manual: You can search for results on any number you enter.
+    - learning: Your AI will like this feature a lot ;-)
+
+ You can visualize plotting graphs with results, store math 'tree' relationships (so the tool doesn't need to process again similar data) 
+ and organized auto-save your results, for example, to be used on a future for BigData processing or AI maths solving tasks.
 
 #### Installing:
 

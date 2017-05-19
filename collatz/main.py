@@ -15,23 +15,25 @@ class Collatz(object):
         self.m=False
 
     def banner(self):
-        print "  ____      _ _       _        "
-        print " / ___|___ | | | __ _| |_ ____ "
-        print "| |   / _ \| | |/ _` | __|_  / "
-        print "| |__| (_) | | | (_| | |_ / /  "
-        print " \____\___/|_|_|\__,_|\__/___| "
-        print " 'Are all numbers equal to 1?' "
+        print "  ____      _ _       _               "
+        print " / ___|___ | | | __ _| |_ ____        "
+        print "| |   / _ \| | |/ _` | __|_  /        "
+        print "| |__| (_) | | | (_| | |_ / /         "
+        print " \____\___/|_|_|\__,_|\__/___|        "
+        print " 'Natural integers always becomes 1?' "
         print "\n", 75*"="
         print " - RULE 1: if n is 'even' then n = n/2"
         print " - RULE 2: if n is 'odd' then n = 3n+1"
         print 75*"=","\n"
 
     def generate_graph(self):
-        print " + Generating 'plots' for number:", self.root
+        if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+            print "[Info] Generating 'plots' for number:", self.root
         if not os.path.exists("graphs/"):
             os.mkdir("graphs/")
-        print "\n   + Thread(s):", len(self.tree)
-        print '     - Tree =', self.tree
+        if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+            print "\n   + Thread(s):", len(self.tree)
+            print '     - Tree =', self.tree
         plt.figure()
         fig = plt.figure(1)
         ax = fig.add_subplot(111, facecolor='black')
@@ -50,11 +52,12 @@ class Collatz(object):
             fig.savefig(g+"/"+self.root+"-collatz_graph.png")
             f.write(str(self.tree))
             f.close
-            print "\n [Info] Generated 'tree' secuence at folder: "+g+"/\n"
+            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                print "\n[Info] Generated 'tree' secuence at folder: "+g+"/\n"
         else:
-            print "\n [Info] You have this 'tree' secuence previously saved. Exiting...\n"
+            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                print "\n[Info] You have this 'tree' secuence previously saved. Exiting...\n"
         ax.clear()
-        print 75*"=", "\n"
 
     def generate_forest(self, rng):
         srng = rng.split('-')
@@ -64,18 +67,19 @@ class Collatz(object):
         except:
             print "\n[Error] Numbers on range should be integers (ex: 427-8981318). Aborting...\n"
             sys.exit(2)
-        print "Generating 'forest' for range:", rng, "\n"
+        print "[Info] Generating 'forest' for range:", rng, "\n"
         if x < y:
             for i in range(x,y+1):
                n = i
                self.root = str(n)
-               print " + Generating 'tree' for number:", self.root
+               if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                   print "[Info] Generating 'tree' for number:", self.root
                self.generate_tree(n)
         else:
             for i in range(y,x+1):
                n = i
                self.root = str(n)
-               print " + Generating 'tree' for number:", self.root
+               print "[Info] Generating 'tree' for number:", self.root
                self.generate_tree(n)
 
     def generate_tree(self, n):
@@ -86,7 +90,8 @@ class Collatz(object):
         self.tree = []
         while True:
             t=t+1
-            print ""
+            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                print ""
             try:
                 if int(n) != 1:
                     if int(n) <= 0:
@@ -95,28 +100,36 @@ class Collatz(object):
                         sys.exit(2)
                     else:
                         self.m=False
-                        print "   + Thread:", t
+                        if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                            print "   + Thread:", t
                         self.tree.append(int(n))
                         if int(n) & 1:
-                            print '     - Root =', n, "[odd]"
+                            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                                print '     - Root =', n, "[odd]"
                             r=3*int(n)+1
-                            print '     - New  =', r, '[3*'+str(n)+'+1='+str(r)+"]"
+                            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                                print '     - New  =', r, '[3*'+str(n)+'+1='+str(r)+"]"
                             o=o+1
                         else:
-                            print '     - Root =', n, "[even]"
+                            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                                print '     - Root =', n, "[even]"
                             r=int(n)/2
                             if int(r) == 1:
                                 w=True
-                            print '     - New  =', r, "["+str(n)+'/2='+str(r)+"]"
+                            if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                                print '     - New  =', r, "["+str(n)+'/2='+str(r)+"]"
                             e=e+1
                     n = r
                 else:
                     if w is False:
-                        print "   + Thread:", t
+                        if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                            print "   + Thread:", t
                         self.tree.append(int(n))
-                        print '     - Root =', n, "[odd]"
+                        if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                            print '     - Root =', n, "[odd]"
                         r=3*int(n)+1
-                        print '     - New  =', r, '[3*'+str(n)+'+1='+str(r)+"]"
+                        if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
+                            print '     - New  =', r, '[3*'+str(n)+'+1='+str(r)+"]"
                         o=o+1
                         w = True
                         n = r
@@ -130,7 +143,7 @@ class Collatz(object):
                 sys.exit(2)
         if self.m is False:
             print 100*"-"
-            print "Number "+self.root+ " takes "+str(int(t)-1)+" threads using "+str(o)+" odds and "+str(e)+" evens to becomes 1"
+            print "[Info] Number "+self.root+ " takes "+str(int(t)-1)+" threads using "+str(o)+" odds and "+str(e)+" evens to becomes 1"
             print 100*"-","\n"
             if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
                 graph=raw_input("Wanna generate a 'graph'? (Y/n)")
