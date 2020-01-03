@@ -10,6 +10,8 @@ Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 import os, sys
 import matplotlib.pyplot as plt
 
+plt.rcParams.update({'figure.max_open_warning': 0})
+
 class Collatz(object):
     def __init__(self):
         self.m=False
@@ -39,6 +41,7 @@ class Collatz(object):
         ax = fig.add_subplot(111, facecolor='black')
         for t in self.tree:
             ax.scatter(self.tree.index(t)+1, t, color="red", s=2)
+        plt.clf() # removing matplot future warning
         header = '"Tree" for number '+str(self.root)+' to becomes 1'
         plt.title(header)
         plt.ylabel('Number(s)')
