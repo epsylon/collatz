@@ -51,7 +51,7 @@ class Collatz(object):
             f = open(g+"/"+self.root+"-collatz_tree.txt", 'wb')
             fig.savefig(g+"/"+self.root+"-collatz_graph.png")
             for t in self.tree:
-                f.write(str(t))
+                f.write(str(t).encode('utf-8'))
             f.close
             if not self.mode == "l" or self.mode == "L" or self.mode == "Learn" or self.mode == "learn":
                 print("\n[Info] Generated 'tree' secuence at folder: "+g+"/\n")
